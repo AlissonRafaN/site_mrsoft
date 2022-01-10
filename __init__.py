@@ -24,4 +24,7 @@ def create_app(test_config=None):
     def hello():
         return "<p>Hello, World!</p>"
 
+    from . import db
+    db.init_app(app)
+
     return app
