@@ -22,12 +22,17 @@ def create_app(test_config=None):
         pass
 
     @app.route('/')
-    def hello():
+    def home():
         return render_template("index.html")
+
+    @app.route('/sobre')
+    def sobre():
+        return
 
     from . import db
     db.init_app(app)
 
+    from . import auth
+    app.register_blueprint(auth.bp)
+
     return app
-
-
