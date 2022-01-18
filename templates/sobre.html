@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Saiba sobre nós</title>
+    <link rel="stylesheet" type="text/css" href=" https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="static/css/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +16,21 @@
 
     <div class="container">
 
-      <div class="j1">
-          <ul class="nav">
-              <li><a href="{{url_for('homepage')}}">Inicio</a></li>
-              <li><a href="{{url_for('produtos')}}">Produtos</a></li>
-              <li><a href="{{url_for('contato')}}">Contato</a></li>
-              <li><a href="{{url_for('sobre')}}">Sobre</a></li>
-          </ul>
+<header>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+          <a href="#home" class="w3-bar-item w3-button">MrSoft</a>
+          <!-- Right-sided navbar links. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a href="{{url_for('homepage')}}">Inicio</a>
+            <a href="{{url_for('produtos')}}">Produtos</a>
+            <a href="{{url_for('contato')}}">Contato</a>
+            <a href="{{url_for('sobre')}}">Sobre</a>
+          </div>
+        </div>
       </div>
+</header>
 
-    </div>
-
-    
-    <div class="fundo">
-        <img src="../static/img/mrsoft-depositphotos-bgremover-depositphotos-bgremover(1).png" alt="">
-    </div>
 
 </body>
 

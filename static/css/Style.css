@@ -10,11 +10,17 @@ body{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(to right, #7FFFD4,#F8F8FF);
-    background-size: cover;
+    background-image: url(../img/Dimensões\ personalizadas\ 1420x681\ px.jpeg);
+    background-attachment: fixed;
+    Background-size:cover;
+
+  
+    
 }
 
 .j1{
-    text-align: center;
+    text-align: top;
+    position: fixed;
 
 }
 
@@ -24,9 +30,9 @@ body{
 }
 
 ul{
-    margin: 100px auto;
+    margin: 100px ;
     width: 800px;
-    height: 50px;
+    height: 100px;
     list-style: none;
     background: rgba(0,0,0,0.2)
 }
@@ -46,6 +52,7 @@ li a{
     font-size: 24px;
     transition: 0.5s;
     padding: 24px 30px;
+   
 }
 
 li a:hover{
@@ -61,3 +68,4 @@ li a:hover{
     text-align: right;
 
 }
+
