@@ -1,14 +1,14 @@
 html{
     margin: 0;
     padding: 0;
-    widht: 100%;
+    width: 100%;
 }
 
 body{
     margin: 0;
     padding: 0;
-    widht: 100%;
-    height 100vh;
+    width: 100%;
+    height: 100vh;
     background-image: linear-gradient(to right, #7FFFD4,#F8F8FF);
     background-size: cover;
 }
@@ -25,7 +25,7 @@ body{
 
 ul{
     margin: 100px auto;
-    widht: 800px;
+    width: 800px;
     height: 50px;
     list-style: none;
     background: rgba(0,0,0,0.2)
@@ -52,5 +52,12 @@ li a:hover{
     transition: 0.5s;
     color: black;
     background: rgba(255,255,255,0.7);
+
+}
+
+.fundo{
+    background-position: right;
+    background-size: cover;
+    text-align: right;
 
 }
