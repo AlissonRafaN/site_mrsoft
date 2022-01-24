@@ -57,10 +57,10 @@ body, html {
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+    <span class="w3-jumbo w3-hide-small">Automação Comercial para o seu estabelecimento</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Automação Comercial para o seu estabelecimento</span><br>
+    <span class="w3-large">Não perca tempo, venha conhecer as nossas soluções!</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Veja agora as nossas soluções! </a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -73,6 +73,7 @@ body, html {
 </header>
 
 <!-- About Section -->
+
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">Sobre Nós. </h3>
   <p class="w3-center w3-large">Temos soluções para atender o seu estabelecimento</p>
@@ -83,7 +84,7 @@ body, html {
       <p>Atendemos o seu estabelecimento com um sistema de gestão e venda completo.</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <i class='fa fa-heart w3-margin-bottom w3-jumbo'></i>
       <p class="w3-large">Restaurantes</p>
       <p>Temos uma solução com controle de mesas e emissão de comandas</p>
     </div>
@@ -165,19 +166,15 @@ body, html {
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
   <div class="w3-quarter">
     <span class="w3-xxlarge">14+</span>
-    <br>Partners
+    <br>Parceiros
   </div>
   <div class="w3-quarter">
     <span class="w3-xxlarge">55+</span>
-    <br>Projects Done
+    <br>Projetos implantados
   </div>
   <div class="w3-quarter">
     <span class="w3-xxlarge">89+</span>
-    <br>Happy Clients
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Meetings
+    <br>Clientes
   </div>
 </div>
 
@@ -227,17 +224,20 @@ body, html {
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone/Whatsapp: +55 8698877-6655</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mrsoftsistemas@gmail.com</p>
     <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+    <!-- Utilizar Jinja2 nessa parte de formulario -->
+    {% block content %}
+    <form action="/contact" method="post"> 
+      <p><input class="w3-input w3-border" name="nome" type="text" placeholder="Nome" required name="Name"></p>
+      <p><input class="w3-input w3-border" name="email" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" name="assunto" type="text" placeholder="Assunto" required name="Subject"></p>
+      <p><input class="w3-input w3-border" name=mensagem type="text" placeholder="Mensagem" required name="Message"></p>
       <p>
         <button class="w3-button w3-black" type="submit">
           <i class="fa fa-paper-plane"></i> Enviar! 
         </button>
       </p>
     </form>
+    {% endblock %}
     <!-- Image of location/map -->
     <img src="/static/img/mapa.PNG" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
   </div>
