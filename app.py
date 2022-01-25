@@ -25,7 +25,7 @@ def contact():
 
     server = smtplib.SMTP("smtp.gmail.com",587)
     server.starttls()
-    server.login("welberthvieiratito@gmail.com", "We30819099")
+    server.login("welberthvieiratito@gmail.com", "************")
     server.sendmail("welberthvieiratito@gmail.com", email, assunto, name, mensagem,) 
     title = "Agradecemos o Contato!"
     return render_template("index.html", title=title, name=name, email=email, assunto=assunto, mensagem= mensagem)
