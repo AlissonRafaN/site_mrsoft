@@ -481,7 +481,11 @@ a{
     }
     
     .w3-col.m3,.w3-quarter{
-        width:24.99999%
+        width:24.44444%
+    }
+
+    .w3-quarter-parceiros{
+        width: 33.33333%
     }
     
     .w3-col.m4,.w3-third{

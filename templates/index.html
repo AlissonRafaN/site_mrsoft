@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Economica&display=swap" rel="stylesheet">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Economica', sans-serif; font-size:24px;}
 
 body, html {
   height: 100%;
@@ -16,9 +21,9 @@ body, html {
 
 /* Full height image header */
 .bgimg-1 {
-  background-position: center;
+  background-position: right;
   background-size: cover;
-  background-image: url("/static/img/Dimensões personalizadas 1420x681 px.jpeg");
+  background-image: url('/static/img/fundo.jpeg');
   min-height: 100%;
 }
 
@@ -31,11 +36,11 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">Mr.Soft Sistemas</a>
+    <a href="#home" class="w3-bar-item w3-button">Mr.Soft Sistemas</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">Sobre Nós</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Nossos Produtos</a>
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-address-card"></i></i> Sobre Nós</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-diamond"></i> Nossos Produtos</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -56,7 +61,7 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
+  <div class="w3-display-left w3-text-black" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Automação Comercial para o seu estabelecimento</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Automação Comercial para o seu estabelecimento</span><br>
     <span class="w3-large">Não perca tempo, venha conhecer as nossas soluções!</span>
@@ -79,24 +84,29 @@ body, html {
   <p class="w3-center w3-large">Temos soluções para atender o seu estabelecimento</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Supermercado</p>
+      <i class="fa fa-shopping-cart w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Supermercados e Mercadinhos</p>
       <p>Atendemos o seu estabelecimento com um sistema de gestão e venda completo.</p>
     </div>
     <div class="w3-quarter">
-      <i class='fa fa-heart w3-margin-bottom w3-jumbo'></i>
-      <p class="w3-large">Restaurantes</p>
+      <i class='fa fa-bus w3-margin-bottom w3-jumbo w3-center'></i>
+      <p class="w3-large">Postos de Combustíveis</p>
       <p>Temos uma solução com controle de mesas e emissão de comandas</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Postos de Combustíveis</p>
+      <i class="fa fa-coffee w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Bares e Restaurantes</p>
+      <p>Controle e monitoramento de vendas e combustíveis de acordo com as normas da ANP</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-line-chart w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Varejo em Geral</p>
       <p>Controle e monitoramento de vendas e combustíveis de acordo com as normas da ANP</p>
     </div>
   </div>
 </div>
 
-<!-- Promo Section - "We know design" -->
+<!-- Promo Section - "We know design" 
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
@@ -109,11 +119,11 @@ body, html {
     </div>
   </div>
 </div>
-
+-->
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
+  <h3 class="w3-center">NOSSOS PRODUTOS</h3>
+  <p class="w3-center w3-large">Soluções empresariais completas para o seu estabelecimento</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
@@ -164,15 +174,15 @@ body, html {
 
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
+  <div class="w3-quarter-parceiros w3-center">
     <span class="w3-xxlarge">14+</span>
     <br>Parceiros
   </div>
-  <div class="w3-quarter">
+  <div class="w3-quarter-parceiros w3-center">
     <span class="w3-xxlarge">55+</span>
     <br>Projetos implantados
   </div>
-  <div class="w3-quarter">
+  <div class="w3-quarter-parceiros w3-center">
     <span class="w3-xxlarge">89+</span>
     <br>Clientes
   </div>
@@ -225,19 +235,19 @@ body, html {
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mrsoftsistemas@gmail.com</p>
     <br>
     <!-- Utilizar Jinja2 nessa parte de formulario -->
-    {% block content %}
+    
     <form action="/contact" method="post"> 
-      <p><input class="w3-input w3-border" name="nome" type="text" placeholder="Nome" required name="Name"></p>
-      <p><input class="w3-input w3-border" name="email" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" name="assunto" type="text" placeholder="Assunto" required name="Subject"></p>
-      <p><input class="w3-input w3-border" name=mensagem type="text" placeholder="Mensagem" required name="Message"></p>
+      <p><input class="w3-input w3-border" name='nome' type="text" placeholder="Nome" required name="Name"></p>
+      <p><input class="w3-input w3-border" name='email' type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" name='assunto' type="text" placeholder="Assunto" required name="Subject"></p>
+      <p><input class="w3-input w3-border" name='mensagem' type="text" placeholder="Mensagem" required name="Message"></p>
       <p>
         <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> Enviar! 
+          <i class='fa fa-paper-plane-o'></i> Enviar! 
         </button>
       </p>
     </form>
-    {% endblock %}
+   
     <!-- Image of location/map -->
     <img src="/static/img/mapa.PNG" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
   </div>
@@ -247,12 +257,9 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Ir para o topo</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
   </div>
 </footer>
  

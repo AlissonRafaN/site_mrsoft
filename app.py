@@ -1,7 +1,8 @@
 import os
 from flask import Flask, render_template, request
-from flask_mail import Mail, Message 
+from email.message import EmailMessage
 import smtplib
+
 
 app = Flask(__name__)
 
@@ -9,24 +10,24 @@ app = Flask(__name__)
 def homepage():
     return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(debug=True)
-    app.debug = True
-
 
 
 @app.route('/contact', methods=['POST', 'GET'])
 def contact(): 
-    name = request.form.get('nome')
-    email = request.form.get('email')
-    assunto = request.form.get('assunto')
-    mensagem = request.form.get('mensagem')
+    msg = EmailMessage()
 
 
+    msg['Subject']=request.form.get('assunto')
+    msg['From']='Contato Mr.Soft'
+    msg['To']='welberthvieiratito@gmail.com'
     server = smtplib.SMTP("smtp.gmail.com",587)
     server.starttls()
-    server.login("welberthvieiratito@gmail.com", "************")
-    server.sendmail("welberthvieiratito@gmail.com", email, assunto, name, mensagem,) 
+    server.login("welberthvieiratito@gmail.com", "")
+    server.send_message(msg) 
     title = "Agradecemos o Contato!"
-    return render_template("index.html", title=title, name=name, email=email, assunto=assunto, mensagem= mensagem)
+    server.quit() 
+    return render_template("index.html")
     
+
+if __name__ == "__main__":
+    app.run(debug=True)
