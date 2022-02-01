@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <h1> Obrigado por entrar em contato! </h1>
+
+        {{ seu_nome }} || {{ seu_email }} || {{ assunto }} || {{ mensagem }}
+        
+    </div>
+{% endblock %}

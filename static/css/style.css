@@ -481,7 +481,8 @@ a{
     }
     
     .w3-col.m3,.w3-quarter{
-        width:24.44444%
+        width:24.44444%;
+        box-align: center
     }
 
     .w3-quarter-parceiros{
@@ -1005,7 +1006,7 @@ a{
 }
 
 .w3-jumbo{
-    font-size:64px!important
+    font-size:56px!important
 }
 
 .w3-left-align{

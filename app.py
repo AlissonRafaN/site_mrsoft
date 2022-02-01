@@ -24,12 +24,14 @@ def homepage():
     return render_template("index.html")
 
 
-@app.route('/submit', methods=['GET', 'POST'])
-def submit():
-    form = form_email()
-    if form.validate_on_submit():
-        return redirect('/success')
-    return render_template('submit.html', form=form)
+def form():
+    seu_nome = request.form.get('seu_nome')
+    seu_email = request.form.get('seu_email')
+    assunto = request.form.get('assunto')
+    mensagem = request.form.get('mensagem')
+
+    title = 'Fale conosco! '
+    return render_template("index.html", title=title, seu_nome=seu_nome, seu_email=seu_email, assunto=assunto, mensagem=mensagem)
 
 
 if __name__ == "__main__":
