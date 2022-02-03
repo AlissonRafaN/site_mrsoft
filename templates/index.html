@@ -43,7 +43,7 @@ body, html {
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-address-card"></i></i> Sobre Nós</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-diamond"></i> Nossos Produtos</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
+      <a href="{{ url_for('get_contact') }}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -58,7 +58,7 @@ body, html {
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE NÓS</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><Em>EQUIPE</Em></a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+  <a href="{{ url_for('get_contact') }}" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -170,40 +170,7 @@ body, html {
   </div>
 </div>
 
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">Fale Conosco</h3>
-  <p class="w3-center w3-large">Gostaria de saber mais sobre as nossas soluções? Teremos o prazer de lhe atender. </p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Avenida Joaquim Nelson, 3585 - Edifício Adelaide, Parque Ideal - Teresina-PI.</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone/Whatsapp: +55 8698877-6655</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mrsoftsistemas@gmail.com</p>
-    <br>
     
-    <!-- Utilizar Jinja2 nessa parte de formulario -->
-    
-    <form method="POST" action="{{ form }}">
-      <form>
-        <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu Nome" name='seu_nome'>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu E-mail" name='seu_email'>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Assunto" name='assunto'>
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Sua Mensagem" name='mensagem'>
-        </div>
-        <br>
-          <button class="w3-button w3-black" type="submit">
-        <i class='fa fa-paper-plane-o'></i> Enviar! 
-      </button>
-      </p>
-    </form>
-
-
     <!-- Image of location/map -->
     <img src="/static/img/mapa.PNG" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
   </div>

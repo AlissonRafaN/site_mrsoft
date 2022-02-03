@@ -1,38 +1,44 @@
-import os
-from flask import Flask, render_template, request
-from email.message import EmailMessage
-import smtplib
-import email
-from flask_wtf import FlaskForm, CSRFProtect
-from wtforms import StringField, TextAreaField
-from wtforms.validators import DataRequired, Email
 
-
-csrf = CSRFProtect()
-
-class form_email(FlaskForm):
-    name = StringField('Nome', validators=[DataRequired('Nome não pode ficar vazio')])
-    email = StringField('E-mail', validators=[DataRequired('E-mail não pode ficar vazio')])
-    subject = StringField('Assunto', validators=[DataRequired('Assunto não pode ficar vazio')])
-    message = TextAreaField('Mensagem', validators=[DataRequired('Mensagem não pode ficar vazio')])
+from flask import Flask, redirect, render_template
+from forms import ContactForm
+from flask import request
+import pandas as pd
+from flask_mail import Message, Mail
 
 
 app = Flask(__name__)
+
+app.secret_key = 'secretKey'
+
+mail = Mail()
+
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USE_SSL"] = True
+app.config["MAIL_USERNAME"] = 'contatomrsoft@gmail.com'
+app.config["MAIL_PASSWORD"] = 'contatomrsoftcontato'
+
+mail.init_app(app)
+
+
 
 @app.route("/")
 def homepage():
     return render_template("index.html")
 
 
-def form():
-    seu_nome = request.form.get('seu_nome')
-    seu_email = request.form.get('seu_email')
-    assunto = request.form.get('assunto')
-    mensagem = request.form.get('mensagem')
-
-    title = 'Fale conosco! '
-    return render_template("index.html", title=title, seu_nome=seu_nome, seu_email=seu_email, assunto=assunto, mensagem=mensagem)
-
-
+@app.route('/contato', methods=["GET", "POST"])
+def get_contact():
+    form = ContactForm()
+    if request.method == 'POST':
+       msg = Message(form.subject.data, sender='contatomrsoft@gmail.com', recipients=['mrsoftsistemas@gmail.com'])
+       msg.body = """
+      From: %s <%s>
+      %s
+      """ % (form.name.data, form.email.data, form.message.data)
+       mail.send(msg)
+    return render_template('contact.html', form=form)
+   
 if __name__ == "__main__":
     app.run(debug=True)
+
