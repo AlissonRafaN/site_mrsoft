@@ -32,7 +32,7 @@ def homepage():
 def get_contact():
     form = ContactForm()
     if request.method == 'POST':
-       msg = Message(form.subject.data, sender='contatomrsoft@gmail.com', recipients=['mrsoftsistemas@gmail.com'])
+       msg = Message(form.subject.data, sender='contatomrsoft@gmail.com', recipients=['welberthvieiratito@gmail.com'])
        msg.body = """
       From: %s <%s>
       %s
