@@ -60,9 +60,9 @@ body, html {
 
 <!-- here we add our contact forms -->
 {% block content %}
-<div class="contact ,">
+<div class="w3-container w3-light-grey contact  ">
     <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-        <h3 class="w3-center">Fale Conosco</h3>
+        <h3 class="w3-center w3-jumbo w3-hide-small">Fale Conosco</h3>
         <p class="w3-center w3-large">Gostaria de saber mais sobre as nossas soluções? Teremos o prazer de lhe atender. </p>
         
         <!-- Just here i use "url_for" to call the function get_contact.
@@ -87,7 +87,7 @@ body, html {
             <!-- Content of your request -->
             <p>
                 {{ form.message.label }}<br>
-                {{ form.message(placeholder='Escreva a sua Solicitação ...') }}
+                {{ form.message(placeholder='O que gostaria de nos dizer? No final, deixe um ou mais contatos (Whatsapp, telefone, e-mail secundário)') }}
             </p>
             <!-- Submit button -->
             <p>
