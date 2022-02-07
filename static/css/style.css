@@ -1,5 +1,6 @@
 ﻿html{
-    box-sizing:border-box
+    box-sizing:border-box;
+    text-decoration: none;
 }
 *,*:before,*:after{
     box-sizing:inherit
@@ -45,7 +46,7 @@ a:active,a:hover{
 }
 
 abbr[title]{
-    border-bottom:none;text-decoration:underline;text-decoration:underline dotted
+    border-bottom:none;text-decoration:none;text-decoration:none
 }
 
 b,strong{
@@ -380,7 +381,8 @@ a{
 }
 
 .w3-bar{
-    width:100%;overflow:hidden
+    width:100%;overflow:hidden;
+    
 }
 
 .w3-center .w3-bar{
@@ -711,6 +713,7 @@ a{
 
 .w3-top{
     top:0
+
 }
 
 .w3-bottom{
@@ -1391,3 +1394,26 @@ a{
 /*******************************************************************
                                 END CONTACT
 *******************************************************************/
+
+.semsubline{
+    text-decoration: none;
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
