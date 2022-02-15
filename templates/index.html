@@ -53,30 +53,32 @@ body, html {
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <a href="https://servidorseguro.mysuite2.com.br/client/login.php?sl=mrsf" class="w3-bar-item w3-button"><i class="fa fa-comments"></i> Atendimento</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#segmentos" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></i> Segmentos</a>
-      <a href="#sistemas" class="w3-bar-item w3-button"><i class="fa fa-tv"></i> Sistemas</a>
-      <a href="#sobre" class="w3-bar-item w3-button"><i class="fa fa-group"></i> Sobre Nós</a>
-      <a href="{{ url_for('get_contact') }}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+<div class="navbar fixed-top navbar-expand-sm w3-black">
+    
+    <div class="w3-bar w3-black w3-card" id="myNavbar">
+      <a href="https://servidorseguro.mysuite2.com.br/client/login.php?sl=mrsf" class="w3-bar-item w3-button"><i class="fa fa-comments"></i> Atendimento</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#segmentos" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></i> Segmentos</a>
+        <a href="#sistemas" class="w3-bar-item w3-button"><i class="fa fa-tv"></i> Sistemas</a>
+        <a href="#sobre" class="w3-bar-item w3-button"><i class="fa fa-group"></i> Sobre Nós</a>
+        <a href="{{ url_for('get_contact') }}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SEGMENTOS</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><Em>EQUIPE</Em></a>
-  <a href="{{ url_for('get_contact') }}" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+  <a href="#segmentos" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></i> Segmentos</a>
+  <a href="#sistemas" class="w3-bar-item w3-button"><i class="fa fa-tv"></i> Sistemas</a>
+  <a href="#sobre" class="w3-bar-item w3-button"><i class="fa fa-group"></i> Sobre Nós</a>
+  <a href="{{ url_for('get_contact') }}" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
 </nav>
 
 <!-- Header with full-height image -->
