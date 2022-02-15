@@ -1396,12 +1396,21 @@ a{
 *******************************************************************/
 
 .semsubline{
-    text-decoration: none;
-
+    text-decoration: none
 
     
 }
 
+.espacamento{
+    line-height:normal;
+
+
+}
+
+.carousel {
+    width: 1080px;
+    height: 350px;
+  }
 
 
 
