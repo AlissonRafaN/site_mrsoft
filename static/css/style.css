@@ -1412,6 +1412,12 @@ a{
     height: 350px;
   }
 
+.fixar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+    
 
 
 

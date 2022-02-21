@@ -6,13 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="facebook-domain-verification" content="2oh99wt4w1t0kkp1y04pj6k1qxforc" />
 
-<link rel="stylesheet" href="/static/css/style.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Economica&display=swap" rel="stylesheet">
@@ -26,6 +23,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static/css/style.css">
 
 <link rel="shortcut icon" href="static\img\favicon.ico" />
 </head>
@@ -53,9 +51,8 @@ body, html {
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="navbar fixed-top navbar-expand-sm w3-black">
-    
-    <div class="w3-bar w3-black w3-card" id="myNavbar">
+<div class="w3-top">
+    <div class="navbar navbar-inverse navbar-fixed-top w3-black" id="myNavbar navbar">
       <a href="https://servidorseguro.mysuite2.com.br/client/login.php?sl=mrsf" class="w3-bar-item w3-button"><i class="fa fa-comments"></i> Atendimento</a>
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small">
@@ -66,21 +63,21 @@ body, html {
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <a href="javascript:void(0)" class="navbar navbar-inverse navbar-fixed-top w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
-</div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+<div class="navbar navbar-inverse navbar-fixed-top w3-sidebar w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="navbar w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#segmentos" class="w3-bar-item w3-button"><i class="fa fa-cogs"></i></i> Segmentos</a>
   <a href="#sistemas" class="w3-bar-item w3-button"><i class="fa fa-tv"></i> Sistemas</a>
   <a href="#sobre" class="w3-bar-item w3-button"><i class="fa fa-group"></i> Sobre Nós</a>
   <a href="{{ url_for('get_contact') }}" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
-</nav>
+</div>
 
+</div>
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   
