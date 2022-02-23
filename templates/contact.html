@@ -3,23 +3,29 @@
 <head>
 <title>Mr.Soft Sistemas</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="facebook-domain-verification" content="2oh99wt4w1t0kkp1y04pj6k1qxforc" />
-<link rel="stylesheet" href="/static/css/style.css">
+
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Economica&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Economica&family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/static/css/style.css">
 
 <link rel="shortcut icon" href="static\img\favicon.ico" />
 </head>
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: 'Gugi', cursive; font-size:16px;}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Arial', sans-serif; font-size:16px;}
 
 body, html {
   height: 100%;
@@ -39,38 +45,18 @@ body, html {
 }
 </style>
 
-<div class="w3-top navbar fixed-top navbar-expand-sm w3-black">
-    
-  <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <a href="https://servidorseguro.mysuite2.com.br/client/login.php?sl=mrsf" class="w3-bar-item w3-button"><i class="fa fa-comments"></i> Atendimento</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="{{ url_for('homepage') }}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+<!-- Navbar (sit on top) -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
+<div class="navbar-inverse fixed-top w3-black" id="myNavbar navbar">
+  <a href="https://servidorseguro.mysuite2.com.br/client/login.php?sl=mrsf" class="w3-bar-item w3-button"><i class="fa fa-comments"></i> Atendimento</a>
+  <!-- Right-sided navbar links -->
+  <a href="{{ url_for('homepage') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-home"></i> Voltar</a>
 </div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-<a href="{{ url_for('homepage') }}" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Fale Conosco</a>
-</nav>
-
-
-
+  
 
 
 <body>
 
-<!-- add the right css file -->
-{% block styles %}
-<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
-{% endblock %}
 
 
 <!-- here we add our contact forms -->
@@ -114,7 +100,7 @@ body, html {
 {% endblock %}
 
 </header>
-
+    <center>
     <div style="margin-top:48px">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Avenida Joaquim Nelson, 3585 - Edifício Adelaide, Parque Ideal - Teresina-PI.</p>
       <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone/Whatsapp: +55 8698877-6655</p>
@@ -123,4 +109,5 @@ body, html {
       <br>
 
     </div>
+  </center>
 </html>
